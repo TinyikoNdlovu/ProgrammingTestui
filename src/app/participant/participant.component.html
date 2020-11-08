@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <button class="open-button" onclick="openForm()">Fill out survey</button>
+
+    <button class="open-button" onclick="viewResults()">View survey results</button>
+
+    <div class="form-popup" id="myForm">
+
+        <label>Take our Survey</label>
+        <br>
+
+        <label>Personal Details:</label>
+        <br>
+        <br>
+
+        <form action="" id="form" method="POST">
+            <p>
+                <label>Surname</label>
+                <input type="text" id="mySurname" />
+            </p>
+
+            <p>
+                <label>First Name</label>
+                <input type="text" id="myFname" />
+            </p>
+
+            <p>
+                <label>Contact Number</label>
+                <input type="text" id="myContact" maxlength="10" />
+            </p>
+
+            <p>
+                <label>Date of Taking Survey</label>
+                <input type="date" id="myDate" />
+            </p>
+
+            <p>
+                <label>Age</label>
+                <input type="text" id="myAge" size="3" maxlength="3" />
+            </p>
+
+            <div>
+                <label>What is your favourite food? (You can choose more than 1 answer)</label><br>
+
+                <input type="checkbox" name="piza"><label for="pizza">Pizza</label><br>
+                <input type="checkbox" name="paasta"><label for="pizza">Pasta</label><br>
+                <input type="checkbox" name="papwors"><label for="pizza">Pap and Wors</label><br>
+                <input type="checkbox" name="chickenfry"><label for="pizza">Chicken stir fry</label><br>
+                <input type="checkbox" name="beeffry"><label for="pizza">Beef stir fry</label><br>
+                <input type="checkbox" name="other"><label for="pizza">Other</label><br>
+            </div>
+            <br>
+            <br>
+
+            <label>On a scale of 1 to 5 indicate whether you strongly agree to strongly disagree</label>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Strongly Agree (1)</th>
+                        <th>Agree (2)</th>
+                        <th>Neutral (3)</th>
+                        <th>Disagree (4)</th>
+                        <th>Strongly disagree (5)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            I like to eat out
+                        </td>
+                        <td>
+                            <input value="1" id="type_radio_1" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="2" id="type_radio_2" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="3" id="type_radio_3" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="4" id="type_radio_4" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="5" id="type_radio_5" name="type_radio" type="radio" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            I like to watch movies
+                        </td>
+                        <td>
+                            <input value="6" id="type_radio_6" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="7" id="type_radio_7" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="8" id="type_radio_8" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="9" id="type_radio_9" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="10" id="type_radio_10" name="type_radio" type="radio" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            I like to watch TV
+                        </td>
+                        <td>
+                            <input value="11" id="type_radio_11" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="12" id="type_radio_12" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="13" id="type_radio_13" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="14" id="type_radio_14" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="15" id="type_radio_15" name="type_radio" type="radio" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            I like to listen to the radio
+                        </td>
+                        <td>
+                            <input value="16" id="type_radio_16" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="17" id="type_radio_17" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="18" id="type_radio_18" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="19" id="type_radio_19" name="type_radio" type="radio" />
+                        </td>
+                        <td>
+                            <input value="20" id="type_radio_20" name="type_radio" type="radio" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+
+            <button type="button" onclick="submmit()">Submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function submmit() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
