@@ -7,6 +7,15 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
+  readonly APIUrl="http://localhost:50603";
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  getPerLIST():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/person');
+  }
+
+  addPerson(val:any){
+    return this.http.post(this.APIUrl+'/Person',val);
+  }
 }

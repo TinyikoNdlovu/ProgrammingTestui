@@ -2,17 +2,314 @@
 <html>
 
 <body>
+    <section>
+        <form>
+            <div class="step step-1 active">
+                <div>
+                    <button type="button" class="fill-btn">Fill out survey</button>
+                </div>
+                <div>
+                    <button type="button" class="view-btn">View survey results</button>
+                </div>
+            </div>
+        </form>
 
-    <form action="" id="form" method="POST">
-        <p>
-            <button type="button" class="btn btn-primary btn-lg" onclick="submmit()">Fill out survey</button>
-        </p>
+        <form>
+            <div class="step step-2">
+                <div class="form-group">
+                    <label>Take our Survey</label>
+                </div>
+                <div class="form-group">
+                    <label>Personal Details:</label>
+                </div>
+                <section class="participant">
+                    <div class="form-group">
+                        <label>Surname</label>
+                        <input type="text" id="surname" />
+                    </div>
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" />
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="text" id="contactNumber" maxlength="10" />
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Taking Survey</label>
+                        <input type="date" id="myDate" />
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" id="Age" size="3" maxlength="3" />
+                    </div>
+                </section>
 
-        <p>
-            <button type="button" class="btn btn-primary btn-lg" onclick="view()">View survey results</button>
-        </p>
+                <section class="dish">
+                    <div>
+                        <label>What is your favourite food? (You can choose more than 1 answer)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="pizza" id="pizza">
+                        <label for="pizza">Pizza</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="pasta" id="pasta">
+                        <label for="pasta">Pasta</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="papwors" id="papwors">
+                        <label for="papwors">Pap and Wors</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="chickenfry" id="chickenfry">
+                        <label for="chickenfry">Chicken stir fry</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="beeffry" id="beeffry">
+                        <label for="beeffry">Beef stir fry</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="other" id="other">
+                        <label for="other">Other</label>
+                    </div>
+                </section>
 
-    </form>
+                <section class="scale">
+                    <div>
+                        <label>On a scale of 1 to 5 indicate whether you strongly agree to strongly disagree</label>
+                    </div>
+                    <div class="form-group">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Strongly Agree (1)</th>
+                                    <th>Agree (2)</th>
+                                    <th>Neutral (3)</th>
+                                    <th>Disagree (4)</th>
+                                    <th>Strongly disagree (5)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        I like to eat out
+                                    </td>
+                                    <td>
+                                        <input value="1" id="type_radio_1" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="2" id="type_radio_2" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="3" id="type_radio_3" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="4" id="type_radio_4" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="5" id="type_radio_5" name="type_radio" type="radio" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        I like to watch movies
+                                    </td>
+                                    <td>
+                                        <input value="6" id="type_radio_6" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="7" id="type_radio_7" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="8" id="type_radio_8" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="9" id="type_radio_9" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="10" id="type_radio_10" name="type_radio" type="radio" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        I like to watch TV
+                                    </td>
+                                    <td>
+                                        <input value="11" id="type_radio_11" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="12" id="type_radio_12" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="13" id="type_radio_13" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="14" id="type_radio_14" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="15" id="type_radio_15" name="type_radio" type="radio" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        I like to listen to the radio
+                                    </td>
+                                    <td>
+                                        <input value="16" id="type_radio_16" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="17" id="type_radio_17" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="18" id="type_radio_18" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="19" id="type_radio_19" name="type_radio" type="radio" />
+                                    </td>
+                                    <td>
+                                        <input value="20" id="type_radio_20" name="type_radio" type="radio" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <form>
+            <div class="step step-3">
+                <div class="form-group">
+                    <label>Total number of surveys:</label>
+                </div>
+                <div>
+                    <label>Total number of surveys:</label>
+                </div>
+                <div>
+                    <label>Average age:</label>
+                </div>
+                <div>
+                    <label>Oldest person who participated in survey</label>
+                </div>
+                <div>
+                    <label>Younges person who participated in survey</label>
+                </div>
+                <div>
+                    <label>Percentage of people who like Pizza:</label>
+                </div>
+                <div>
+                    <label>Percentage of people who like Pasta:</label>
+                </div>
+                <div>
+                    <label>Percentage of people who like Pap and Wors:</label>
+                </div>
+                <div>
+                    <label>People like to eat out:</label>
+                </div>
+                <div>
+                    <label>People like to watch movies:</label>
+                </div>
+                <div>
+                    <label>People like to watch TV:</label>
+                </div>
+                <div>
+                    <label>People like to listen to the radio:</label>
+                </div>
+                <div>
+                    <button type="button" class="ok-btn">OK</button>
+                </div>
+
+            </div>
+        </form>
+    </section>
+    <script>
+        const steps = Array.from(document.querySelectorAll('form .step'));
+        const fillBtn = document.querySelectorAll('form .fill-btn');
+        const viewBtn = document.querySelectorAll('form .view-btn');
+        const okBtn = document.querySelectorAll('form .ok-btn');
+        const form = document.querySelector('form');
+
+        fillBtn.forEach(button => {
+            button.addEventListener('click', (e) => {
+                changeStep('fillout');
+            })
+        })
+        viewBtn.forEach(button => {
+            button.addEventListener('click', () => {
+                changeView('view')
+            })
+        })
+        okBtn.forEach(button => {
+            button.addEventListener('click', () => {
+                changeOk('ok')
+            })
+        })
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const inputs = [];
+            const checkboxes = [];
+            const radiobuttons = [];
+            form.querySelectorAll('input').forEach(input => {
+                const {
+                    name,
+                    value
+                } = input;
+                inputs.push({
+                    name,
+                    value
+                })
+            })
+            console.log(inputs)
+            form.reset();
+            let index = 0;
+            const active = document.querySelector('form .step.active');
+            index = steps.indexOf('active');
+            steps[index].classList.remove('active');
+            steps[0].classList.add('active')
+        })
+
+        function changeStep(btn) {
+            let index = 0;
+            const active = document.querySelector('form .step.active');
+            index = steps.indexOf('active');
+            steps[index].classList.remove('active');
+            if (btn === 'fill') {
+                index++;
+            }
+            steps[index].classList.add('active')
+            console.log(index)
+        }
+
+        function changeView(btn) {
+            let index = 0;
+            const active = document.querySelector('form .step.active');
+            index = steps.indexOf('active');
+            steps[index].classList.remove('active');
+            if (btn === 'view') {
+                index++;
+            }
+            steps[index].classList.add('active')
+            console.log(index)
+        }
+
+        function changeOk(btn) {
+            let index = 0;
+            const active = document.querySelector('form .step.active');
+            index = steps.indexOf('active');
+            steps[index].classList.remove('active');
+            if (btn === 'ok') {
+                index++;
+            }
+            steps[index].classList.add('active')
+            console.log(index)
+        }
+    </script>
 
 </body>
 
